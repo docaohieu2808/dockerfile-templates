@@ -21,7 +21,6 @@ Bạn có thể dễ dàng tham khảo, copy, chỉnh sửa để phục vụ d�
 - [Swift (Server)](#swift)
 - [C++](#c)
 - [Dart](#dart)
-- [Khác...](#kh%C3%A1c)
 
 
 ## 📋 Hướng dẫn tổ chức repo
