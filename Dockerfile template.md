@@ -331,37 +331,3 @@ FROM debian:stable-slim
 COPY --from=build /app/app /app/app
 CMD ["/app/app"]
 ```
-
-
-## FAQ
-
-**1. Nên đặt tên file như thế nào cho đẹp và dễ đọc trên GitHub?**
-
-- Dockerfile để nguyên tên Dockerfile _(không thêm đuôi)_
-- File cấu hình, ví dụ nginx: `nginx.conf`
-- Shell script: `run.sh`, ...
-- Tổng hợp tài liệu/ghi chú: `.md` (Markdown)
-
-**2. Trình bày tài liệu như thế nào để mọi người dễ copy và theo dõi?**
-
-- Dùng [code block](https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks) ba dấu ```, chỉ định ngôn ngữ _(vd: dockerfile, nginx, bash)_.
-- Nên ghi rõ chú thích từng phần, tách biệt Dockerfile/cấu hình để người đọc dễ hiểu.
-
----
-
-## Đóng góp
-
-Bạn muốn bổ sung template khác? _Pull Request_ nhé!
-
----
-
-**Hãy chọn mẫu phù hợp và tùy biến theo project cá nhân của bạn!**
-
----
-
-Nếu cần bổ sung mẫu cho framework/ngôn ngữ khác, vui lòng tạo issue mới hoặc PR 🚀.
-
----
-
-*(Tài liệu này sinh tự động bởi AI, cập nhật bởi cộng đồng.)*
-
