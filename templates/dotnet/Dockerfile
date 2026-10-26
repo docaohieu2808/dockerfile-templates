@@ -13,7 +13,7 @@ RUN --mount=type=cache,target=/root/.nuget/packages \
     dotnet publish App.csproj -c Release -o /out --no-restore /p:UseAppHost=false
 
 ## Run stage ##
-FROM mcr.microsoft.com/dotnet/aspnet:10.0.9-alpine3.24
+FROM mcr.microsoft.com/dotnet/aspnet:10.0.14-alpine3.24
 WORKDIR /app
 ENV ASPNETCORE_HTTP_PORTS=8080
 
