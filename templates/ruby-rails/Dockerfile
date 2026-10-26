@@ -6,17 +6,20 @@ FROM ruby:4.0.9-alpine3.24 AS builder
 # hadolint ignore=DL3018
 RUN apk add --no-cache build-base
 WORKDIR /app
+# BUNDLE_PATH is explicit because deployment mode otherwise installs into ./vendor/bundle.
 ENV BUNDLE_DEPLOYMENT=1 \
+    BUNDLE_PATH=/usr/local/bundle \
     BUNDLE_WITHOUT="development:test"
 COPY Gemfile Gemfile.lock ./
 RUN bundle install --jobs 4 \
-    && rm -rf "${BUNDLE_APP_CONFIG:-/usr/local/bundle}"/cache
+    && rm -rf /usr/local/bundle/cache
 
 ## Run stage ##
 FROM ruby:4.0.9-alpine3.24
 ENV RAILS_ENV=production \
     RACK_ENV=production \
     BUNDLE_DEPLOYMENT=1 \
+    BUNDLE_PATH=/usr/local/bundle \
     BUNDLE_WITHOUT="development:test" \
     RAILS_LOG_TO_STDOUT=1
 WORKDIR /app
