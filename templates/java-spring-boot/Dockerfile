@@ -12,7 +12,7 @@ COPY src ./src
 RUN --mount=type=cache,target=/root/.m2 mvn -B -q package -DskipTests
 
 ## Run stage ##
-FROM eclipse-temurin:25.0.4.1_1-jre-alpine-3.24
+FROM eclipse-temurin:27-jre-alpine-3.24
 
 RUN addgroup -S -g 10001 app && adduser -S -u 10001 -G app app
 WORKDIR /app
