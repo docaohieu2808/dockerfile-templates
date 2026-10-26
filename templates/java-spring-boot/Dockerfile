@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ## Build stage ##
-FROM maven:3.9.16-eclipse-temurin-25-alpine AS build
+FROM maven:3.9-eclipse-temurin-26-alpine AS build
 WORKDIR /src
 
 # Resolve dependencies before copying sources so this layer is cached until pom.xml changes.
