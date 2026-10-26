@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ## Build stage ##
-FROM gcc:15.3.0-trixie AS build
+FROM gcc:16.1.0-trixie AS build
 WORKDIR /src
 COPY app.cpp ./
 # -static: no shared libraries are needed at runtime, so the final image can be empty.
