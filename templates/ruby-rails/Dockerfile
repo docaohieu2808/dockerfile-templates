@@ -24,7 +24,8 @@ ENV RAILS_ENV=production \
     RAILS_LOG_TO_STDOUT=1
 WORKDIR /app
 
-RUN addgroup -S -g 10001 app && adduser -S -u 10001 -G app app
+RUN addgroup -S -g 10001 app && adduser -S -u 10001 -G app app \
+    && mkdir -p tmp log && chown app:app tmp log
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY --chown=app:app Gemfile Gemfile.lock config.ru ./

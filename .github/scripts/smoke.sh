@@ -26,7 +26,7 @@ case "$mode" in
     cid=$(docker run -d -p "127.0.0.1:${port}:${port}" "$@" "$image")
     cleanup() {
       echo "--- container logs ---"
-      docker logs "$cid" 2>&1 | tail -n 40 || true
+      docker logs "$cid" 2>&1 | head -n 25 || true
       docker rm -f "$cid" >/dev/null 2>&1 || true
     }
     trap cleanup EXIT
