@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ## Build stage: install dependencies into a virtualenv ##
-FROM python:3.14.9-slim-trixie AS build
+FROM python:3.15.0-slim-trixie AS build
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
@@ -10,7 +10,7 @@ COPY requirements.txt ./
 RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt
 
 ## Run stage ##
-FROM python:3.14.9-slim-trixie
+FROM python:3.15.0-slim-trixie
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PATH="/opt/venv/bin:$PATH" \
