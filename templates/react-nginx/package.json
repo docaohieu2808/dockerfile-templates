@@ -1,0 +1,9 @@
+{
+  "name": "react-nginx-sample",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static single-page app served by nginx. Replace the build script with your bundler (vite, CRA, Angular CLI, Vue CLI).",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  }
+}

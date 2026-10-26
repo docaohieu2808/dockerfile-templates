@@ -1,0 +1,7 @@
+name: app
+description: Smallest Dart HTTP server for the Dockerfile template.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.13.0

@@ -1,0 +1,6 @@
+vendor
+.env
+.env.*
+storage/logs/*
+Dockerfile
+.dockerignore

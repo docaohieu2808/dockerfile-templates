@@ -1,0 +1,66 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/cpp
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/dart
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/django
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/dotnet
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/flask
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/golang
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/java-spring-boot
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/laravel
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/nestjs
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/nextjs
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/nodejs
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/react-nginx
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/ruby-rails
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/rust
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /templates/swift-vapor
+    schedule:
+      interval: weekly

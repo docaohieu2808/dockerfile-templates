@@ -1,0 +1,22 @@
+import Vapor
+
+@main
+struct Entrypoint {
+    static func main() async throws {
+        var env = try Environment.detect()
+        try LoggingSystem.bootstrap(from: &env)
+
+        let app = try await Application.make(env)
+        app.get { _ in "Hello from Vapor\n" }
+        app.get("health") { _ in ["status": "ok"] }
+
+        do {
+            try await app.execute()
+        } catch {
+            app.logger.report(error: error)
+            try? await app.asyncShutdown()
+            throw error
+        }
+        try await app.asyncShutdown()
+    }
+}
