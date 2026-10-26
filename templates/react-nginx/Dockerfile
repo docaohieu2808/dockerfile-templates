@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 
 ## Run stage ##
-FROM nginxinc/nginx-unprivileged:1.30.6-alpine3.24
+FROM nginxinc/nginx-unprivileged:1.31.7-alpine3.24
 
 # Build output directory: "build" (Create React App), "dist" (Vite, Vue, Angular).
 ARG OUT_DIR=build
