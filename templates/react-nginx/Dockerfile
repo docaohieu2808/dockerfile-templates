@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ## Build stage ##
-FROM node:24.22.1-alpine3.24 AS build
+FROM node:26.12.1-alpine3.24 AS build
 WORKDIR /app
 
 # Install dependencies first so this layer is cached until the lockfile changes.
