@@ -1,13 +1,13 @@
 # syntax=docker/dockerfile:1
 
 ## Dependencies stage: production dependencies only ##
-FROM node:24.22.1-alpine3.24 AS deps
+FROM node:26.12.1-alpine3.24 AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev
 
 ## Run stage ##
-FROM node:24.22.1-alpine3.24
+FROM node:26.12.1-alpine3.24
 ENV NODE_ENV=production
 WORKDIR /app
 
