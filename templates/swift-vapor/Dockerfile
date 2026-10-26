@@ -15,7 +15,7 @@ RUN swift build -c release --static-swift-stdlib \
     && cp "$(swift build -c release --show-bin-path)/App" /staging/
 
 ## Run stage ##
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 # Package versions rotate inside an Ubuntu release, so pinning them would break rebuilds.
 # hadolint ignore=DL3008
 RUN apt-get update \
