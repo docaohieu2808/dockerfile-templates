@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ## Build stage ##
-FROM swift:6.4.1-noble AS build
+FROM swift:6.4.2-noble AS build
 WORKDIR /build
 
 # Resolve dependencies first so this layer is cached until Package.swift changes.
