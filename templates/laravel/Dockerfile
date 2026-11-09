@@ -11,7 +11,7 @@ RUN composer dump-autoload --no-dev --optimize --no-interaction
 
 ## Run stage ##
 # FrankenPHP bundles the web server (Caddy) and PHP, so one process serves the app.
-FROM dunglas/frankenphp:1.13.3-php8.5.12-alpine
+FROM dunglas/frankenphp:1.13.5-php8.5.12-alpine
 WORKDIR /app
 
 # Production php.ini; secrets (APP_KEY, database credentials) come from the environment at runtime.
