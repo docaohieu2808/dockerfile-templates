@@ -2,7 +2,7 @@
 
 ## Build stage ##
 # Run the compiler on the build machine and cross-compile for the target platform.
-FROM --platform=$BUILDPLATFORM golang:1.27.3-alpine3.24 AS build
+FROM --platform=$BUILDPLATFORM golang:1.27.4-alpine3.24 AS build
 ARG TARGETOS
 ARG TARGETARCH
 WORKDIR /src
