@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ## Build stage ##
-FROM dart:3.13.7-sdk AS build
+FROM dart:3.14.0-sdk AS build
 WORKDIR /app
 
 COPY pubspec.yaml ./
