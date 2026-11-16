@@ -2,7 +2,7 @@
 
 ## Build stage ##
 # The Alpine image targets musl, which links statically by default, so the binary runs on scratch.
-FROM rust:1.99.1-alpine3.24 AS build
+FROM rust:1.100.0-alpine3.24 AS build
 WORKDIR /app
 
 COPY Cargo.toml Cargo.lock ./
